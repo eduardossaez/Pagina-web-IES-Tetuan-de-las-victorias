@@ -1,0 +1,553 @@
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+/* Hace que el ancho y alto incluyan el padding y el borde */
+* {
+    box-sizing: border-box;
+}
+
+/* Hace que el desplazamiento de la página sea suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   CUERPO DE LA PÁGINA
+   ========================================================= */
+
+/* Configuración general del documento */
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+/* Coloca las diferentes páginas una al lado de otra */
+.documento {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 0;
+    min-width: max-content;
+}
+
+
+/* =========================================================
+   ARTBOARD / PÁGINAS
+   ========================================================= */
+
+/* Define el tamaño y comportamiento de cada página */
+.artboard {
+    position: relative;
+    flex: 0 0 1440px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Altura de la página de inicio */
+.home {
+    height: 1024px;
+}
+
+/* Altura de las páginas de centro y estudios */
+.centro,
+.estudios {
+    height: 2200px;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+/* Barra superior de navegación */
+.header {
+    height: 80px;
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    justify-content: space-between;
+}
+
+/* Nombre del instituto */
+.brand {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+
+/* Menú de navegación */
+.header nav {
+    display: flex;
+    gap: 76px;
+}
+
+/* Estilo de los enlaces de la cabecera y del pie */
+.header a,
+.footer a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Color del primer enlace del menú */
+.header a:first-child {
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   PÁGINA DE INICIO
+   ========================================================= */
+
+/* Zona principal de la página de inicio */
+.home-hero {
+    position: relative;
+    height: 510px;
+}
+
+/* Texto principal de la portada */
+.home-copy {
+    position: absolute;
+    left: 100px;
+    top: 125px;
+}
+
+/* Título principal */
+.home-copy h1 {
+    font-size: 68px;
+    line-height: 1.02;
+    margin: 0;
+    color: #172033;
+    letter-spacing: -2px;
+}
+
+/* Texto descriptivo debajo del título */
+.home-copy p {
+    font-size: 24px;
+    line-height: 1.42;
+    color: #64748b;
+    margin: 50px 0 68px;
+}
+
+
+/* =========================================================
+   BOTÓN AZUL
+   ========================================================= */
+
+/* Botón de la página de inicio */
+.blue-button {
+    display: inline-flex;
+    width: 170px;
+    height: 49px;
+    background: #1d4ed8;
+    color: #172033;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   IMAGEN PRINCIPAL
+   ========================================================= */
+
+/* Contenedor de la imagen principal */
+.hero-photo {
+    position: absolute;
+    left: 768px;
+    top: 234px;
+    width: 554px;
+    height: 404px;
+    overflow: hidden;
+}
+
+/* Hace que la imagen ocupe todo el contenedor */
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   TARJETA DE INTRODUCCIÓN
+   ========================================================= */
+
+/* Caja gris situada debajo de la imagen */
+.intro-card {
+    position: absolute;
+    left: 843px;
+    top: 595px;
+    width: 404px;
+    height: 78px;
+    background: #d9d9d9;
+    padding: 15px 69px;
+}
+
+/* Texto pequeño de la tarjeta */
+.intro-card span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Título de la tarjeta */
+.intro-card h2 {
+    font-size: 15px;
+    margin: 5px 0;
+    color: #64748b;
+}
+
+/* Oculta el párrafo de la tarjeta */
+.intro-card p {
+    display: none;
+}
+
+
+/* =========================================================
+   SECCIÓN DEL FAVICON / INFORMACIÓN
+   ========================================================= */
+
+/* Contenedor de la sección inferior */
+.favicon-section {
+    position: absolute;
+    left: 100px;
+    top: 743px;
+    width: 1100px;
+}
+
+/* Título de la sección */
+.favicon-section h2 {
+    font-size: 26px;
+    margin: 0 0 28px;
+}
+
+/* Texto descriptivo de la sección */
+.favicon-section p {
+    font-size: 17px;
+    line-height: 1.35;
+    color: #64748b;
+    margin: 0 0 15px 144px;
+}
+
+/* Imagen o favicon de la sección */
+.favicon {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 80px;
+    height: 83px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   PIE DE PÁGINA / FOOTER
+   ========================================================= */
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+    background: #172033;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 67px;
+    gap: 70px;
+    font-size: 15px;
+}
+
+/* Color de los enlaces del footer */
+.footer a {
+    color: #fff;
+}
+
+
+/* =========================================================
+   CABECERA DE CENTRO Y ESTUDIOS
+   ========================================================= */
+
+/* Ajusta el espacio lateral de la cabecera */
+.centro .header,
+.estudios .header {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN DEL CENTRO
+   ========================================================= */
+
+/* Contenedor principal de la introducción */
+.center-intro {
+    position: absolute;
+    left: 100px;
+    top: 170px;
+    width: 1200px;
+    height: 555px;
+}
+
+/* Título principal de la página del centro */
+.center-intro h1 {
+    font-size: 58px;
+    line-height: 1.02;
+    margin: 0;
+    color: #172033;
+}
+
+/* Texto introductorio del centro */
+.center-intro p {
+    font-size: 24px;
+    color: #64748b;
+    margin-top: 70px;
+}
+
+/* Imagen del centro */
+.center-intro img {
+    position: absolute;
+    left: 0;
+    top: 600px;
+    width: 552px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   TEXTO INFORMATIVO DEL CENTRO
+   ========================================================= */
+
+/* Texto descriptivo situado en la página */
+.center-text {
+    position: absolute;
+    left: 100px;
+    top: 430px;
+    width: 600px;
+    font-size: 20px;
+    line-height: 1.48;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   UBICACIÓN DEL CENTRO
+   ========================================================= */
+
+/* Contenedor de la información de ubicación */
+.location {
+    position: absolute;
+    left: 800px;
+    top: 800px;
+    width: 300px;
+}
+
+/* Título de la ubicación */
+.location h2 {
+    font-size: 28px;
+    margin: 0 0 54px;
+}
+
+/* Texto de la ubicación */
+.location p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+}
+
+
+/* =========================================================
+   INSTALACIONES
+   ========================================================= */
+
+/* Contenedor general de las instalaciones */
+.facility {
+    position: absolute;
+    left: 91px;
+    top: 1265px;
+    width: 1270px;
+}
+
+/* Título principal de instalaciones */
+.facility h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+/* Párrafo situado directamente dentro de .facility */
+.facility > p {
+    font-size: 20px;
+    color: #64748b;
+    margin: 22px 0 52px;
+}
+
+/* Títulos secundarios de las instalaciones */
+.facility h3 {
+    font-size: 26px;
+    margin: 0 0 45px;
+}
+
+
+/* =========================================================
+   FILA DE FOTOGRAFÍAS
+   ========================================================= */
+
+/* Organiza las fotografías en tres columnas */
+.photo-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* Cada bloque que contiene una fotografía */
+.photo-row figure {
+    margin: 0;
+    height: 218px;
+    background: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hace que las imágenes ocupen todo su espacio */
+.photo-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto que aparece sobre la parte inferior de cada imagen */
+.photo-row figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 15px;
+    background: #fff;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TÍTULO DE SERVICIOS
+   ========================================================= */
+
+/* Espacio superior e inferior del título de servicios */
+.services-title {
+    margin-top: 72px !important;
+    margin-bottom: 20px !important;
+}
+
+
+/* =========================================================
+   SERVICIOS
+   ========================================================= */
+
+/* Organiza los servicios en dos columnas */
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    font-size: 20px;
+    line-height: 1.55;
+}
+.service-row > div {
+    padding: 0;
+}
+
+.studies-title {
+    position: absolute;
+    left: 68px;
+    top: 120px;
+}
+
+.studies-title h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.studies-title p {
+    font-size: 20px;
+    color: #64748b;
+    margin-top: 24px;
+}
+
+.studies-image {
+    position: absolute;
+    left: 307px;
+    top: 300px;
+    width: 762px;
+    height: 602px;
+    object-fit: cover;
+}
+
+.modules {
+    position: absolute;
+    left: 67px;
+    top: 1000px;
+    width: 1180px;
+}
+
+.modules h2 {
+    font-size: 28px;
+    margin: 0 0 60px;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 75px;
+    row-gap: 66px;
+}
+
+.module-grid article {
+    min-height: 125px;
+}
+
+.module-grid h3 {
+    font-size: 20px;
+    margin: 0 0 25px;
+}
+
+.module-grid p {
+    font-size: 16px;
+    line-height: 1.42;
+    color: #172033;
+    margin: 0;
+}
+
+.estudios .footer {
+    bottom: 0;
+}
+
+@media (max-width: 1500px) {
+
+    body {
+        background: #fff;
+    }
+
+    .documento {
+        display: block;
+        min-width: 0;
+    }
+
+    .artboard {
+        margin: 0 auto;
+    }
+
+    .artboard:not(:first-child) {
+        margin-top: 20px;
+    }
+}
